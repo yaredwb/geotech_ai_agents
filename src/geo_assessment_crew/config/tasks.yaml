@@ -20,6 +20,14 @@ bearing_capacity_task:
     - extract_requirements_task
     - review_data_task
 
+foundation_recommendation_task:
+  description: 'Review the bearing capacity calculations and provide brief recommendations on whether shallow foundations are feasible or if ground improvement or deep foundations should be considered.'
+  expected_output: 'A short paragraph discussing feasibility followed by bullet point recommendations.'
+  agent: foundation_recommendation_advisor
+  context:
+    - bearing_capacity_task
+    - review_data_task
+
 reporting_task:
   description: 'Create a brief preliminary geotechnical summary report in markdown format. Combine the outputs from the previous tasks into sections: 1. Project Overview, 2. Site Data Summary, 3. Preliminary Analysis Results, 4. Brief Remarks/Recommendations based *only* on the comparison in the analysis task.'
   expected_output: 'A concise markdown report file integrating the findings from the previous tasks into the specified sections. Ensure professional language and clear formatting. Do not include markdown code fences (\`\`\`) around the final report content.'
@@ -29,3 +37,4 @@ reporting_task:
     - extract_requirements_task
     - review_data_task
     - bearing_capacity_task
+    - foundation_recommendation_task

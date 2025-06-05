@@ -5,17 +5,19 @@ This project demonstrates a multi-agent system built with [CrewAI](https://crewa
 1.  Analyze project requirements.
 2.  Review summarized site investigation data.
 3.  Perform a basic bearing capacity estimation.
-4.  Compile the findings into a summary report.
+4.  Suggest foundation recommendations based on the calculations.
+5.  Compile the findings into a summary report.
 
 This serves as a basic example of applying AI agent collaboration to a typical geotechnical engineering workflow.
 
 ## Features
 
-* **Role-Based Agents:** Clearly defined roles for requirements analysis, data review, engineering calculation, and reporting.
+* **Role-Based Agents:** Clearly defined roles for requirements analysis, data review, engineering calculation, recommendation, and reporting.
 * **Sequential Workflow:** Tasks are executed in a logical order using CrewAI's sequential process.
 * **Configuration Driven:** Agents and Tasks are defined in YAML files (`config/agents.yaml`, `config/tasks.yaml`) for easy modification.
 * **OpenAI Integration:** Uses GPT-4o for agent intelligence (requires an API key).
 * **Markdown Reporting:** Generates a final summary report in Markdown format.
+* **Actionable Advice:** Provides foundation recommendations based on analysis results.
 
 ## Project Structure
 
