@@ -29,6 +29,13 @@ class GeoAssessmentCrew():
         )
 
     @agent
+    def foundation_recommendation_advisor(self) -> Agent:
+        return Agent(
+            config=self.agents_config['foundation_recommendation_advisor'],
+            verbose=True
+        )
+
+    @agent
     def technical_report_summarizer(self) -> Agent:
         return Agent(
             config=self.agents_config['technical_report_summarizer'],
@@ -51,6 +58,12 @@ class GeoAssessmentCrew():
     def bearing_capacity_task(self) -> Task:
         return Task(
             config=self.tasks_config['bearing_capacity_task'],
+        )
+
+    @task
+    def foundation_recommendation_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['foundation_recommendation_task'],
         )
 
     @task

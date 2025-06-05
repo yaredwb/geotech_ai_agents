@@ -8,6 +8,14 @@ project_brief_analyst:
   verbose: true
   allow_delegation: false
 
+foundation_recommendation_advisor:
+  role: 'Foundation Recommendation Advisor'
+  goal: 'Evaluate the bearing capacity results and propose suitable foundation solutions or ground improvement options.'
+  backstory: 'A seasoned geotechnical expert providing actionable advice on next steps when bearing capacity may be marginal. Focus on concise, practical recommendations.'
+  llm: 'openai/gpt-4o-mini'
+  verbose: true
+  allow_delegation: false
+
 geotechnical_data_reviewer:
   role: 'Site Data Interpretation Specialist'
   goal: 'Review provided geotechnical site investigation summary: {site_data_summary}. Identify key soil layers, depths, and their fundamental properties relevant for preliminary calculations (e.g., soil type, N-value, cohesion, friction angle).'
